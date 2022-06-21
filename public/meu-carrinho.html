@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meu Carrinho | Loja Virtual</title>
+
+    <!-- STYLESHEET LINK -->
+    <link rel="stylesheet" href="../css/style-carrinho.css">
+
+    <!-- BOOTSTRAP LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- TYPED CDN LINK -->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+  </head>
+  <body>
+
+    <div id="anuncio" class="text-center">
+      <span id="efeito-texto"></span>
+    </div>
+
+    <script>
+      var options = {
+        strings: ['FRETE GRÁTIS PARA TODO O BRASIL', 'SEU PRODUTO ESTÁ AQUI','É UM ERRO NÃO COMPRAR COM AGENTE', 'É UM ERRO NÃO COMPRAR COM A GENTE'],
+        typeSpeed: 60,
+        smartBackspace: true,
+        backSpeed: 30,
+        loop: true,
+        loopCount: Infinity,
+      };
+  
+      var typed = new Typed('#efeito-texto', options);
+    </script>
+
+    <div class="container-fluid">
+      <header>
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <a href="./index.html" class="navbar-brand mt-1">
+              <img src="../src/americanas-logo.jpeg" alt="logo-americanas" class="img-thumbnail" width="360">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" arial-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                  <a class="nav-link mt-3" href="../public/meu-carrinho.html"><h5>Meu Carrinho</h5></a>
+                </li>
+              </ul>
+              <form class="d-flex mt-2" role="search">
+                <input class="form-control me-2" type="search" placeholder="Pesquisar">
+                <button class="btn btn-outline-danger" type="submit">Pesquisar</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <hr class="mb-5" />
+
+      <div class="container">
+        <div class="row" id="produtos">
+          <div class="col-md-12">
+            <div id="tabela">
+              <table class="table border border-2 rounded-4 tabela-carrinho">
+                <thead>
+                  <tr>
+                    <th scope="col">Qtd.</th>
+                    <th scope="col">Nome do Produto</th>
+                    <th scope="col">Valor</th>
+                  </tr>
+                </thead>
+                <tbody id="corpo-tabela">
+                  <tr>
+                  </tr>
+                </body>
+              </table>
+              <div id="total"></div>
+              <button class="btn btn-outline-danger" type="button" onclick=" localStorage.clear(); location.reload();"> Limpar carrinho </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/carrinho.js"></script>
+  </body>
+
+  <!-- BOOTSTRAP JS LINK -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+</html>

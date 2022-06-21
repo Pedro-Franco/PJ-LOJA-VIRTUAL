@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login | Loja Virtual</title>
+
+    <!-- BOOTSTRAP LINK -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- STYLESHEET LINK -->
+    <link rel="stylesheet" href="../css/style-login.css">
+    
+  </head>
+
+  <body>
+    <main id="main">
+      <div class="container">
+
+        <div class="row justify-content-center align-items-center align-self-center text-center vh-100">
+          <div class="col-md-4"></div>
+          <section class="col-md-4">
+
+            <form class="formulario-login">
+              <h2 class="text-center fw-semibold mb-3">Bem-vindo, Faça seu login para continuar.</h2>
+
+              <input 
+              class="form-control text-center mb-3" 
+              type="text" 
+              id="email" 
+              name="email" 
+              placeholder="E-mail" />
+
+              <input 
+              class="form-control text-center mb-3" 
+              type="password" 
+              id="senha" 
+              name="senha"
+              placeholder="Senha" />
+
+              <input class="btn btn-danger m-2" 
+              type="submit" 
+              value="Entrar"
+              onclick="login(); return false" >
+              
+              <a class="btn btn-outline-danger" href="./cadastro.html">Cadastre-se</a>
+
+              <div class="m-2">
+                <p class="footer-card-login">Ao entrar, você será redirecionado para a página principal</p>
+              </div>
+            </form>
+          </section>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+
+  <!-- JS para validação de login -->
+  <script src="../js/scripts.js"></script>
+
+  <!-- BOOTSTRAP JS LINK -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>
